@@ -1,10 +1,10 @@
 const baseEndpoint = 'https://api.github.com';
 const usersEndpoint = `${baseEndpoint}/users`;
-const $n = document.querySelector('name');
-const $b = document.querySelector('#blog');
+const $n = document.querySelector('.name'); // estaban mal los id
+const $b = document.querySelector('.blog');
 const $l = document.querySelector('.location');
 
-function displayUser(username) {
+async function displayUser(username) { // agregue el async
   $n.textContent = 'cargando...';
   const response = await fetch(`${usersEndpoint}/${username}`);
   console.log(data);
